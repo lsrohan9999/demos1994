@@ -1,0 +1,27 @@
+<apex:page controller="CreateAcc_Prim">
+<style>
+	.mymsg
+	{
+		color:{!fcl};
+    	font-size:{!Fsz};
+    }
+    
+</style>
+    
+<div class="mymsg">
+    {!Msg}
+</div>
+<apex:form >
+    <apex:pageBlock title="Accounts">
+    <apex:pageBlockSection title="Create Account Details" columns="1">
+    <apex:inputText label="Name" value="{!Nm}"/>
+    <apex:inputText label="Industry" value="{!Ind}"/>
+    <apex:inputText label="Fax" value="{!Fx}"/>
+    <apex:inputText label="Phone" value="{!Ph}"/>
+    
+    <apex:commandButton value="INSERT" action="{!CreateAcc}"/>
+        
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

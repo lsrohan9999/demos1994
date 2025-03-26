@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="NTO Resellers" icon-name="standard:contact">
+        <div style="paddinf=g:20px">
+            LIST of NTO Resellers : <br/>
+            <ul>
+            <template for:each={sellerList} for:item="seller">
+                <li key={seller}> Seller Name is : <lightning-badge label={seller}></lightning-badge></li>
+            </template>
+            </ul>
+            <br/>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Seller Name</th>
+                    <th>Location</th>
+                    <th>State</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <template for:each={sellerDetailedList} for:item="seller">
+                        <tr key={seller.name}>
+                            <td><lightning-badge label={seller.name}></lightning-badge></td>
+                            <td><lightning-badge label={seller.loc}></lightning-badge></td>
+                            <td><lightning-badge label={seller.state}></lightning-badge></td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+            <br/>
+            <lightning-datatable data={sellerDetailedList} columns={tabcols} key-field="name"></lightning-datatable>
+        </div>
+    </lightning-card>
+
+</template>

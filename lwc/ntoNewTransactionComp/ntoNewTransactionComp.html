@@ -1,0 +1,15 @@
+<template>
+    <lightning-record-form object-api-name="NTOTransaction__c" layout-type="Full" columns="1"
+    onsuccess={showSuccessMsg} lwc:if={newForm}>
+    </lightning-record-form>
+    <div style="padding:10px" lwc:if={recordCreated}>
+        <lightning-record-view-form object-api-name="NTOTransaction__c" record-id={recordId}>
+            <lightning-output-field field-name="Name"></lightning-output-field>
+            <lightning-output-field field-name="Customer__c"></lightning-output-field>
+            <lightning-output-field field-name="Product__c"></lightning-output-field>
+            <lightning-output-field field-name="Quantity__c"></lightning-output-field>
+        </lightning-record-view-form>
+        <br/>
+        <lightning-button label="New Transaction" variant="brand" onclick={newTran}></lightning-button>
+    </div>
+</template>

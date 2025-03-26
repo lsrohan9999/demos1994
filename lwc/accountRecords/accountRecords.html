@@ -1,0 +1,8 @@
+<template>
+    <div style="padding=20px;background-color:white">
+        <lightning-button label="Show Accounts" onclick={show}></lightning-button>
+        <br/>
+        <lightning-datatable data={accList} columns={tabcols} key-field="Id"
+        hide-checkbox-column="true" show-row-number-column="true"></lightning-datatable>
+    </div>
+</template>

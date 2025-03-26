@@ -1,0 +1,23 @@
+<apex:page controller="InheritanceConCreat">
+    <apex:form >
+       <apex:pageBlock title="Account or Contact">
+        <apex:pageBlockSection title="Account Calculation" columns="1">
+           <apex:inputText label="Enter Account Name" value="{!Name}"/>
+           <apex:inputText label="Enter Phone" value="{!Phone}"/>
+           <apex:inputText label="Enter Industry" value="{!Ind}"/>
+               
+           <apex:commandButton value="Submit" action="{!CreateAcc}"/>    
+        </apex:pageBlockSection>
+            
+           <apex:pageBlockSection title="Contact Calculation" columns="1">
+           <apex:inputText label="Enter First Name" value="{!FName}"/>
+           <apex:inputText label="Enter Phone" value="{!CPhone}"/>
+           <apex:inputText label="Enter Last Name" value="{!LName}"/>
+               
+           <apex:commandButton value="Submit" action="{!CreateAcc}"/>    
+        </apex:pageBlockSection>
+           
+        </apex:pageBlock> 
+        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,68 @@
+<apex:page >
+      
+    <style>
+    .myblk1
+        {
+         width:500px;
+         height:500px;
+        }
+        
+     .myblk2
+        {
+        position:absolute;
+        top:0px;
+        left:501px;
+        }
+     .outter
+        {
+        align:center;
+        }
+    </style>
+    
+    
+    
+    <apex:tabPanel >
+    <apex:tab label="Creation" title="Creation of Login Page">
+        
+            <apex:form >
+             <div class="myblk1">   
+            <apex:pageBlock >
+        <apex:pageBlockSection columns="1">
+            <apex:image value="{!$Resource.img5}" height="60" width="90"/>
+            <apex:inputText label="User Name"/>
+            <apex:inputSecret label="Password"/>
+            <apex:commandButton value="Login" action="https://dell-12f-dev-ed.develop.lightning.force.com/lightning/setup/SetupOneHome/home"/>
+            
+            <apex:selectCheckboxes >
+            	<apex:selectOption itemLabel="Remember me" itemValue="RE"></apex:selectOption>
+            </apex:selectCheckboxes>
+           
+            
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+                
+                    <div class="outter">       
+            <apex:outputLink value="https://login.salesforce.com/secur/forgotpassword.jsp?locale=in">Forgot Password</apex:outputLink> &nbsp;&nbsp;
+             <apex:outputLink value="https://login.salesforce.com/">Use Custom Domain</apex:outputLink>
+             <p>
+           	 </p>
+        <apex:outputText >Not A customer?</apex:outputText> &nbsp;&nbsp;
+        <apex:commandButton value="Try for Free"/> 
+             </div>
+         </div>     
+    </apex:form>  
+                                           
+        <div class="myblk2"><apex:image value="{!$Resource.img4}" height="500" width="750"/></div> 	
+        
+       
+        
+        </apex:tab>
+        
+    <apex:tab label="Login Page" title="Just to Copy">
+        <apex:image value="{!$Resource.Img3}" height="500" width="1200"/>
+        </apex:tab>    
+    </apex:tabPanel>
+    
+    
+   
+</apex:page>

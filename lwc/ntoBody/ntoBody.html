@@ -1,0 +1,8 @@
+<template>
+    <div class="divstyle">
+        <c-nto-home-comp lwc:if={showHome}></c-nto-home-comp>
+        <c-nto-products-comp lwc:elseif={showProds}></c-nto-products-comp>
+        <c-nto-transaction-comp lwc:else></c-nto-transaction-comp>
+        
+    </div>
+</template>

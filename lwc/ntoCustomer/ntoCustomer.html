@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Customer Form" icon-name="standard:account">
+        <div style="padding:20px">
+            <lightning-input label="Customer Name" lwc:ref="cn"></lightning-input>
+            <lightning-input label="Phone" lwc:ref="cp" type="number"></lightning-input>
+            <lightning-input label="Customer Email" lwc:ref="ce" type="email"></lightning-input>
+        </div>
+
+        <div style="text-align:center">
+            <lightning-button label="Submit" variant="brand" onclick={saveDetails}></lightning-button> &nbsp;
+            <lightning-button label="Clear" variant="destructive" onclick={clearForm}></lightning-button>
+        </div>
+
+        <div style="padding:20px;background-color:lime;box-shadow:5px 5px grey" lwc:if={messageCreated}>
+                {custMessage}
+        </div>
+    </lightning-card>
+</template>

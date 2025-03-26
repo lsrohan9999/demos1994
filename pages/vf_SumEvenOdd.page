@@ -1,0 +1,31 @@
+<apex:page controller="SumEvnOdd">
+    <style>
+    	.mybox
+        {
+        	color : {!Fcolor};
+        	font-size : {!Fsize};
+        }
+    </style>
+    <div class="mybox">
+        {!msz}        
+    </div>
+    
+    <apex:form >
+    	<apex:pageBlock title="Calculator">
+        <apex:pageBlockSection title="Sum of ODD and EVEN numbers" columns="1">
+            <apex:inputText label="Enter your number" value="{!num}"/>
+            <apex:selectRadio label="Select your Choice" value="{!CHZ}">
+            <apex:selectOption itemLabel="Even" itemValue="EV"></apex:selectOption>
+            <apex:selectOption itemLabel="Odd" itemValue="OD"></apex:selectOption>
+            </apex:selectRadio>
+            
+            <apex:commandButton value="Calculate" action="{!MainMethod}"/>
+            
+            <apex:outputText label="The Result is" value="{!Res}"></apex:outputText>
+        </apex:pageBlockSection>     
+        <div class="mybox">
+        {!msz}        
+    </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,94 @@
+<apex:page standardController="Account" sidebar="false" showHeader="false">
+   
+    <apex:tabPanel >
+    	<apex:tab label="Tab1" title="INPUT">
+        	<apex:form >
+                <apex:pageBlock title="Account">
+                <apex:pageBlockSection title="Account Details">    
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:inputField value="{!Account.Phone}"/>
+                <apex:inputField value="{!Account.Rating}"/>
+                <apex:inputField value="{!Account.Type}"/>
+                
+                <apex:inputText label="Enter Age" value="{!Account.description}"/>    
+                <apex:inputTextarea label="Enter Details" cols="3" rows="3" richText="true"/>
+                <apex:inputSecret label="Enter Password"/>
+                <apex:inputHidden value="{!Account.Description}"/> 
+                    
+                <apex:inputFile value="Choose File" title="Please select a PDF file"></apex:inputFile>
+                    
+                <apex:selectRadio label="Select Course" layout="pagedirection">
+                    <apex:selectOption itemLabel="SAP" itemValue="Selected Good"></apex:selectOption>
+                    <apex:selectOption itemLabel="ISAP" itemValue="Selected Better"></apex:selectOption>
+                    <apex:selectOption itemLabel="GSAP" itemValue="Selected Excellent"></apex:selectOption>
+                    </apex:selectRadio>
+                    
+                <apex:selectCheckboxes label="Select Course" layout="pagedirection">
+                    <apex:selectOption itemLabel="SAP" itemValue="Selected Good"></apex:selectOption>
+                    <apex:selectOption itemLabel="ISAP" itemValue="Selected Better"></apex:selectOption>
+                    <apex:selectOption itemLabel="GSAP" itemValue="Selected Excellent"></apex:selectOption>
+                    </apex:selectCheckboxes>    
+                
+                <apex:commandButton title="This will save" value="Save" action="{!Save}"/>
+                <apex:commandButton title="This will delete" value="Delete" action="{!Delete}"/>
+                <apex:commandButton title="This will Edit" value="Edit" action="{!Edit}"/>
+                               
+                <apex:commandLink title="Click here to Save" value="Save link" action="{!Save}"/>
+                </apex:pageBlockSection>    
+                </apex:pageBlock>
+        </apex:form>
+        </apex:tab>
+        
+       	<apex:tab label="Tab2" title="WILL DECIDE LATER"></apex:tab>
+       
+        
+        <apex:tab label="Tab3" title="OUTPUT">
+       	
+   		<apex:pageBlock title="General Information">
+        
+        	<apex:pageBlockSection title="Employee details" columns="1">
+            <apex:outputField value="{!Account.Name}"/>
+            <apex:outputField value="{!Account.Phone}"/>
+            <apex:outputField value="{!Account.Rating}"/>
+            <apex:outputField value="{!Account.Type}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Employee Address">
+          <apex:outputField value="{!Account.CleanStatus}"/>
+            <apex:outputField value="{!Account.Sic}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Related data">
+            <apex:relatedList list="contacts"/>
+        </apex:pageBlockSection>
+             	
+        <apex:pageBlockSection title="Custom Table and Fields">
+        	<apex:pageBlockTable value="{!Account.Contacts}" var="ac">
+              <apex:column value="{!ac.FirstName}"/>
+              <apex:column value="{!ac.LastName}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    
+    <apex:pageBlock >
+    <apex:pageBlockSection title="Unrelated Data">
+        <h4> <!--apex:listviews-->Hi This will be done later</h4>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Related Data">
+               <apex:dataList value="{!Account.Contacts}" var="ca">
+               <b> First Name :</b> {!ca.FirstName} &nbsp; {!ca.LastName}  Phone : {!ca.Phone}
+            </apex:dataList>
+        </apex:pageBlockSection>
+   </apex:pageBlock>
+ </apex:tab>
+    </apex:tabPanel>  
+    
+    
+    
+    
+    
+    
+    <!-- <apex:detail /> -->
+</apex:page>

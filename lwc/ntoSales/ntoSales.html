@@ -1,0 +1,9 @@
+<template>
+    <div style="padding:20px;background-color:white">
+        <lightning-input label="Product Quantity" lwc:ref="pq" type="number"></lightning-input>
+        <lightning-input label="Product Price" lwc:ref="pp" type="number"></lightning-input>
+        <lightning-button label="Calculate Tax" onclick={calc}></lightning-button>
+        <br/>
+        <stong> The Tax to be paid is : {ptax}</stong>
+    </div>
+</template>

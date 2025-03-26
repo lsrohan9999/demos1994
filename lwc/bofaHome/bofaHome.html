@@ -1,0 +1,42 @@
+<template>
+    <lightning-layout class="slds-wrap" lwc:if={desktoportab}>
+        <lightning-layout-item size="12">
+            <div style="border:10px ridge white; height:20vh">
+                <c-bofa-header></c-bofa-header>
+            </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="3">
+            <div style="border:10px ridge white; height:60vh">
+                <c-bofa-options></c-bofa-options>
+            </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="9">
+            <div style="border:10px ridge white; height:60vh">
+                <c-bofa-body></c-bofa-body>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+
+
+    <lightning-layout class="slds-wrap" lwc:if={phone}>
+        <lightning-layout-item size="12">
+            <div style="border:10px ridge white; height:20vh">
+                <c-bofa-header></c-bofa-header>
+            </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="3">
+            <div style="border:10px ridge white; height:30vh">
+                <c-bofa-options></c-bofa-options>
+            </div>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="9">
+            <div style="border:10px ridge white; height:50vh">
+                <c-bofa-body></c-bofa-body>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

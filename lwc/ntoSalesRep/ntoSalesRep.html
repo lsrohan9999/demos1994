@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Sales Rep" icon-name="standard:contact">
+        <div style="padding=20px;background-color:blue;">
+            <lightning-input label="Product" lwc:ref="pn"></lightning-input>
+            <lightning-input label="Discount Suggested" lwc:ref="ds" type="number"></lightning-input>
+        <br/>
+
+        <lightning-button label="Send for Approval" onclick={send}></lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

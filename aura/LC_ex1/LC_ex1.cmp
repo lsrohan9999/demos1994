@@ -1,0 +1,7 @@
+<aura:component >
+    <lightning:button label="Submit2" />
+    <lightning:button label="New Contact" variant="Brand"/>	
+    <lightning:button label="Cancel" variant="Destructive"/>
+	<lightning:button label="Save" variant="Success"/>
+	<lightning:button label="Cancel2" variant="Text"/>
+</aura:component>

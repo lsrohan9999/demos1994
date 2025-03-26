@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>62.0</apiVersion>
+	<isExposed>true</isExposed>
+	<targets>
+		<target>lightning__AppPage</target>
+	</targets>
+
+
+<targetConfigs>
+	<targetConfig targets="lightning__AppPage">
+		<property name="prodName" label="Enter Product" type="String"/>
+		<property name="prodCategory" label="Enter Category" type="String"/>
+		<property name="prodCost" label="Enter Cost" type="Integer"/>
+	</targetConfig>
+</targetConfigs>
+
+</LightningComponentBundle>

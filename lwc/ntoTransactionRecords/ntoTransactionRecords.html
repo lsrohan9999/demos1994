@@ -1,0 +1,7 @@
+<template>
+    <lightning-datatable data={recList} columns={tabcols} key-field="Id" onrowaction={handleActions}
+    onrowselection={handleMultipleRows}></lightning-datatable>
+    <br/>
+    <lightning-button label="Delete Rows" variant="destructive" lwc:if={multirows} onclick={deleteMultiple}>
+    </lightning-button>
+    </template>

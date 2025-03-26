@@ -1,0 +1,8 @@
+<template>
+    <div style="padding:20px;background-color:white">
+        <lightning-button label="Load comp" onclick={load}></lightning-button>
+        <lightning-button label="Remove comp" onclick={remove}></lightning-button>
+        <br/>
+        <c-hook-component lwc:if={hcomp}></c-hook-component>
+    </div>
+</template>
