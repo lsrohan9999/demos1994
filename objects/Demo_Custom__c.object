@@ -179,6 +179,15 @@
         <type>Email</type>
         <unique>false</unique>
     </fields>
+<fields>
+        <fullName>Field_Three__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Three</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>CEmail</type>
+        <unique>false</unique>
+    </fields>
     <fields>
         <fullName>Field_five__c</fullName>
         <defaultValue>false</defaultValue>
