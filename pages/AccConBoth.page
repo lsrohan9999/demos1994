@@ -1,0 +1,33 @@
+<apex:page controller="AccConBoth">
+
+    <apex:form >
+       
+        <Style>
+            .mymsg
+            {
+            color:{!Fclr};
+            font-size:{!Fsz};
+            }
+        </Style>
+        
+    <apex:pageBlock title="Account and Contact Selection">
+    <apex:pageBlockSection title="Account or Contact or Both Creation">
+        <apex:inputText label="Enter your Account Name" value="{!AccName}"/>
+        <apex:inputText label="Enter your Last Name" value="{!LastName}"/>
+        
+        <apex:selectRadio label="Select your Choice" value="{!Choice}">
+        	<apex:selectOption itemLabel="Account" itemValue="ACC"></apex:selectOption>
+            <apex:selectOption itemLabel="Contact" itemValue="CON"></apex:selectOption>
+            <apex:selectOption itemLabel="Both" itemValue="BT"></apex:selectOption>
+        </apex:selectRadio>
+        
+        <apex:commandButton value="Submit" action="{!CreateAccConBoth}"/>
+        
+    </apex:pageBlockSection>
+        <div class="mymsg">
+            {!Msg}
+        </div>
+    </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

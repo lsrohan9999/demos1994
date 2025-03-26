@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Transaction" icon-name="standard:opportunity">
+        <div style="padding:20px">
+            Customer Name : <lightning-badge label={custName}></lightning-badge> <br/>
+            Product Name : <lightning-badge label={prodName}></lightning-badge> <br/>
+            No of items Purchased : <lightning-badge label={itemCount}></lightning-badge> <br/>
+        </div>
+
+        <div slot="actions">
+            <span style="padding:10px;background-color:yellow" lwc:if={smallTran}>
+                Small Deal
+            </span>
+            <span style="padding:10px;background-color:lime" lwc:elseif={medTran}>
+                Average Deal
+            </span>
+            <span style="padding:10px;background-color:green" lwc:else>
+                Large Deal
+            </span>
+        </div>
+    </lightning-card>
+</template>

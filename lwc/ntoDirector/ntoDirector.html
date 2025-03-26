@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Director" icon-name="standard:contact">
+        <div style="padding:20px;background-color:orange;">
+
+            <c-not-supervisor ondiscountevent={handlediscount}></c-not-supervisor>
+
+            <span style="background-color:white;padding:10px;font-size:20px;" lwc:if={msgFound}>
+                {approvalMsg}
+            </span>
+
+        </div>
+    </lightning-card>
+</template>

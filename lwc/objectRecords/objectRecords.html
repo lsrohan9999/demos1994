@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Object Records">
+        <div style="padding:20px">
+            <lightning-input label="Object Name" lwc:ref="obj"></lightning-input>
+            <lightning-button label="Display" onclick={show}></lightning-button>
+            <br/>
+            <lightning-datatable data={objList} columns={tabcols} key-field="Id"></lightning-datatable>
+            <br/>
+            <div style="padding:20px;background-color:red" lwc:if={tranError}>
+                    {errorMsg}
+            </div>
+        </div>
+    </lightning-card>
+</template>

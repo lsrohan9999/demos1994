@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+	<div style="background-color:white">
+    Hello this is using Aura Component</div>
+</aura:component>

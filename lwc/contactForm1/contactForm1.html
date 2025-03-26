@@ -1,0 +1,21 @@
+<template>
+ <div style="padding:20px;background-color:yellow">
+    <lightning-record-form object-api-name="Contact" fields={confields}
+    onsuccess={showSuccessNotif} lwc:if={rform}>
+
+    </lightning-record-form>
+    <br/>
+    <div style="padding:20px;background-color:lime" lwc:if={recFound}>
+        <lightning-record-view-form object-api-name="Contact" record-id={recId}>
+            <lightning-output-field field-name="FirstName"></lightning-output-field>
+            <lightning-output-field field-name="LastName"></lightning-output-field>
+            <lightning-output-field field-name="Email"></lightning-output-field>
+            
+        </lightning-record-view-form>  
+
+        <div style="padding:10px;text-align:center">
+            <lightning-button label="New Contact" variant="brand" onclick={createcon} ></lightning-button>       </div>
+
+        </div>
+ </div>
+</template>

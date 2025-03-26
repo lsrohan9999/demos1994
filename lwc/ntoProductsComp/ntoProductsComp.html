@@ -1,0 +1,19 @@
+<template>
+    <lightning-layout class="slds-wrap">
+        <template for:each={prodList} for:item="prod">
+            
+                <lightning-layout-item key={prod.Id} size="4" large-device-size="4" medium-device-size="6" small-device-size="12">
+                    <div  style="padding:10px">
+                        <lightning-card title={prod.Name}>
+                            <div style="padding:10px; overflow-y:scroll">
+                                Description : <lightning-badge label={prod.Description__c}></lightning-badge> <br/>
+                                Price : <lightning-badge label={prod.Price__c}></lightning-badge>
+
+                            </div>
+                        </lightning-card>
+                    </div>
+                </lightning-layout-item>
+            
+        </template>
+    </lightning-layout>
+</template>

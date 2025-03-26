@@ -1,0 +1,9 @@
+<template>
+<div style="padding:20px;background-color:white">
+    <lightning-button label="Show Opportunities" onclick={show}></lightning-button>
+    <br/>
+    <lightning-spinner lwc:if={spinnerval}></lightning-spinner>
+    <lightning-datatable data={opplist} columns={tabcols} key-field="Id"></lightning-datatable>
+    </div>
+
+</template>

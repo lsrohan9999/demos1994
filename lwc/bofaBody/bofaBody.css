@@ -1,0 +1,8 @@
+div{
+	background-color : white;
+	padding: 10px;
+	height: 58vh;
+	font-weight: bolder;
+	overflow-x: scroll ;
+	overflow-y: scroll;
+}

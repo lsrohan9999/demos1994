@@ -1,0 +1,28 @@
+<apex:page >
+    <b>Logged in User :</b>{$User.FirstName} &nbsp;{$User.LastName} <p></p>
+    <apex:image value="{!$Resource.img1}" height="100" width="200"/><p></p>
+    
+    
+    <b>CALCULATOR</b>
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Sum upto a given Even or Odd Number" columns="1" >
+            <apex:inputText label="Enter the Number"/>
+           
+            <apex:selectRadio label="Select your Choice">
+            <apex:selectOption itemLabel="Even" itemValue="E"></apex:selectOption>
+                <apex:selectOption itemLabel="Odd" itemValue="O"></apex:selectOption>
+            </apex:selectRadio>
+            
+            <apex:commandButton value="Calculate"/>
+            <apex:commandButton value="Clear"/>
+            
+            <apex:outputText label="The result is :"></apex:outputText> 
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+        
+ </apex:form>
+    <apex:outputLink value="https://login.salesforce.com/">CLick here to go to salesforce</apex:outputLink>
+     <apex:iframe src="https://www.jiotv.com/"/>
+</apex:page>

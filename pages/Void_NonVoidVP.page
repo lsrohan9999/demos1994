@@ -1,0 +1,16 @@
+<apex:page controller="Void_NonVoid">
+    <apex:form >
+    <b>The Final Points is :</b>{!Points}
+        
+     <apex:pageBlock title="Game">
+        <apex:pageBlockSection columns="1">
+            <apex:inputText label="Enter Company Name" value="{!CmpName}"/>
+         	<apex:inputText label="Enter Last Name" value="{!LName}"/>
+         	
+            <apex:commandButton value="Calculate" action="{!CalPoints}"/>
+         </apex:pageBlockSection>
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

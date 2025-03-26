@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Calculator">
+        <lightning-input type="Text" label="Enter first number:" onchange={callme1}></lightning-input>
+        <lightning-input type="Text" label="Enter second number:" onchange={callme2}></lightning-input>
+
+        <lightning-button  label="Add" onclick={addme}></lightning-button>
+        <lightning-button  label="Sub" onclick={sub}></lightning-button>
+        <lightning-button  label="Mul" onclick={mul}></lightning-button>
+        <p></p>
+        <p></p>
+        <p></p>
+        Result:{resvalue}
+    </lightning-card>
+</template>

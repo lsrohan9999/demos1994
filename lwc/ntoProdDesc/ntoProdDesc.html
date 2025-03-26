@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Products" icon-name="standard:account">
+        <div style="padding:20px">
+
+            <lightning-button-group>
+                <lightning-button label="WindSheeter" onclick={showDesc}></lightning-button>
+                <lightning-button label="ActionCam" onclick={showDesc}></lightning-button>
+                <lightning-button label="Drone" onclick={showDesc}></lightning-button>
+                <lightning-button label="LoopRope" onclick={showDesc}></lightning-button>
+            </lightning-button-group>
+
+        </div>
+
+        <div style="padding:20px;border:10px solid blue;box-shadow:5px 5px grey">
+            <lightning-badge label={prodDesc}></lightning-badge>
+        </div>
+    </lightning-card>
+</template>
